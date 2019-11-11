@@ -39,10 +39,14 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(userID, userName, userEmail) {
+  const Obj = {
+  id: userID,
+  name: userName,
+  email: userEmail
+  }
+  return Obj;
 }
-
 /**
  * ### Challenge `getName`
  * 
@@ -56,8 +60,11 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(userName) {
+  const Name = {
+  name: userName
+  }
+  return Name;
 }
 
 /**
@@ -136,7 +143,7 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  return "This is a " + inventory + index;
 }
 
 /**
@@ -244,9 +251,15 @@ function getGermanCars(/* code here */) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (a, b) => {
+  return a + b;
+}
+const addFive = (num) => {
+  return num + 5;
+}
+const argTimesTwo = (num) => {
+  return (num * 2);
+}
 
 /**
  * ### Challenge `carMaker`
