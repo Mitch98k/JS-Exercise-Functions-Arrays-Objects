@@ -61,10 +61,13 @@ function makePersonObject(userID, userName, userEmail) {
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(userName) {
-  const Name = {
-  name: userName
+  const newObj= {
+  name: userName,
+  sayHi: function(){
+    return "Hello, my name is " + name;
   }
-  return Name;
+  }
+  return newObj.sayHi;
 }
 
 /**
@@ -80,8 +83,17 @@ function getName(userName) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
-  /* code here */
+function makeSmartPerson(name) {
+  const smartObj = {
+    name: name,
+    sum: function(num1, num2){
+      return num1 + num2;
+    },
+    speak: function(){
+      return "Hello, my name is " + name;
+    }
+  }
+  return smartObj;
 }
 
 
@@ -143,7 +155,7 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  return "This is a " + inventory + index;
+  return "This is a " + inventory;
 }
 
 /**
